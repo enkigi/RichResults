@@ -1,0 +1,20 @@
+{
+    "name": "RichResults",
+    "author": "Encyc team, Enki",
+    "description": "Adds site-wide JSON-LD structured data into header for rich results in search engines",
+    "version": "1.0.0",
+    "license-name": "MIT",
+    "type": "other",
+    "requires": {
+        "MediaWiki": ">= 1.35"
+    },
+    "HookHandlers": {
+        "main": {
+            "class": "RichResults"
+        }
+    },
+    "Hooks": {
+        "BeforePageDisplay": "main"
+    },
+    "manifest_version": 2
+}
