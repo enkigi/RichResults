@@ -6,7 +6,7 @@
     "license-name": "MIT",
     "type": "other",
     "requires": {
-        "MediaWiki": ">= 1.35"
+        "MediaWiki": ">= 1.44"
     },
     "HookHandlers": {
         "main": {
