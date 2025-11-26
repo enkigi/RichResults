@@ -6,15 +6,7 @@
     "license-name": "MIT",
     "type": "other",
     "requires": {
-        "MediaWiki": ">= 1.44"
-    },
-    "HookHandlers": {
-        "main": {
-            "class": "RichResults"
-        }
-    },
-    "Hooks": {
-        "BeforePageDisplay": "main"
+        "MediaWiki": ">= 1.35"
     },
     "manifest_version": 2
 }
