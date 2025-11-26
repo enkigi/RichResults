@@ -30,6 +30,6 @@ $wgExtensionCredits['other'][] = [
     'author'         => 'Encyc Team, Enki',
     'url'            => 'https://www.mediawiki.org/wiki/Extension:RichResults',
     'descriptionmsg' => 'richresults-desc',
-    'version'        => '0.1.0',
+    'version'        => '0.1.1',
     'license-name'   => 'MIT'
 ];
