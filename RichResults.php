@@ -24,3 +24,12 @@ $wgHooks['BeforePageDisplay'][] = function ( $out ) {
 }
 </script>' );
 };
+$wgExtensionCredits['other'][] = [
+    'path'           => __FILE__,
+    'name'           => 'RichResults',
+    'author'         => 'Encyc Team, Enki',
+    'url'            => 'https://www.mediawiki.org/wiki/Extension:RichResults',
+    'descriptionmsg' => 'richresults-desc',
+    'version'        => '0.1.0',
+    'license-name'   => 'MIT'
+];
