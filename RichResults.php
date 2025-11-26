@@ -1,3 +1,4 @@
+<?php
 # PHP header modification for Google Rich Results
 # Minimal site-wide JSON-LD
 $wgHooks['BeforePageDisplay'][] = function ( $out ) {
