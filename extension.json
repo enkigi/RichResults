@@ -2,7 +2,7 @@
     "name": "RichResults",
     "author": "Encyc team, Enki",
     "description": "Adds site-wide JSON-LD structured data into header for rich results in search engines",
-    "version": "1.0.0",
+    "version": "0.1.1",
     "license-name": "MIT",
     "type": "other",
     "requires": {
