@@ -37,3 +37,4 @@ class HookHandler {
 
         return true;
     }
+}
