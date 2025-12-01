@@ -6,7 +6,7 @@
     ],
     "url": "https://www.mediawiki.org/wiki/Extension:RichResults",
     "description": "Adds site-wide Organization JSON-LD for Google rich results and structured data."
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license-name": "MIT",
     "type": "other",
     "requires": {
