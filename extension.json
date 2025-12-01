@@ -5,7 +5,7 @@
         "Enki"
     ],
     "url": "https://www.mediawiki.org/wiki/Extension:RichResults",
-    "description": "Adds site-wide Organization JSON-LD for Google rich results and structured data.>
+    "description": "Adds site-wide Organization JSON-LD for Google rich results and structured data."
     "version": "0.3.0",
     "license-name": "MIT",
     "type": "other",
