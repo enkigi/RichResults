@@ -8,7 +8,7 @@
     "description": "Adds site-wide Organization JSON-LD for Google rich results and structured data."
     "version": "1.0.1",
     "license-name": "MIT",
-    "type": "other",
+    "type": "parserhook",
     "requires": {
         "MediaWiki": ">= 1.35.0"
     },
