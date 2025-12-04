@@ -1,40 +1,48 @@
 <?php
-
 namespace RichResults;
 
+use MediaWiki\Hook\ArticleViewHeaderHook;
 use OutputPage;
-use Skin;
+use ParserOutput;
+use WikiPage;
 use MediaWiki\MediaWikiServices;
 
-class HookHandler {
+/**
+ * RichResults – uses on-wiki MediaWiki:RichResults-data page
+ * Uses ArticleViewHeader hook
+ */
+class HookHandler implements ArticleViewHeaderHook {
 
-    public static function onBeforePageDisplay( OutputPage $out, Skin $skin ): bool {
+    public function onArticleViewHeader( WikiPage $page, OutputPage $output, ParserOutput $parserOutput ): void {
+        // Load the message (MediaWiki:RichResults-data)
         $msg = wfMessage( 'RichResults-data' );
 
+        // If the page is missing or disabled → do nothing
         if ( $msg->isDisabled() ) {
-            return true;
+            return;
         }
 
-        $raw = $msg->plain();                                     // raw wikitext
-        $parser = MediaWikiServices::getInstance()->getParser();
+        $raw = $msg->plain();                    // raw wikitext from the page
 
+        // Preprocess it exactly like the old code did (template expansion, etc.)
+        $parser = MediaWikiServices::getInstance()->getParser();
         $parsed = $parser->preprocess(
             $raw,
-            $out->getTitle(),
-            $out->parserOptions()
+            $output->getTitle(),
+            $output->parserOptions()
         );
 
-        // Validate it's real JSON
-        if ( json_decode( $parsed ) === null ) {
-            return true;
+        $json = trim( $parsed );
+
+        // Basic validation – skip if not valid JSON
+        if ( $json === '' || json_decode( $json ) === null ) {
+            return;
         }
 
         $script = '<script type="application/ld+json">' . "\n"
-                . trim( $parsed ) . "\n"
+                . $json . "\n"
                 . '</script>';
 
-        $out->addHeadItem( 'RichResultsJSONLD', $script );
-
-        return true;
+        $output->addHeadItem( 'RichResultsJSONLD', $script );
     }
 }
