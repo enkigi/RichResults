@@ -6,26 +6,16 @@
     ],
     "url": "https://www.mediawiki.org/wiki/Extension:RichResults",
     "description": "Adds site-wide Organization JSON-LD for Google rich results and structured data."
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license-name": "MIT",
     "type": "parserhook",
     "requires": {
         "MediaWiki": ">= 1.35.0"
+    "Hooks": {
+    "ArticleViewHeader": "RichResults\\HookHandler::onArticleViewHeader"
     },
-
     "AutoloadNamespaces": {
         "RichResults\\": "src/"
     },
-
-    "HookHandlers": {
-        "RichResults.main": {
-            "class": "RichResults\\HookHandler"
-        }
-    },
-
-    "Hooks": {
-        "BeforePageDisplay": "RichResults.main"
-    },
-
     "manifest_version": 2
 }
