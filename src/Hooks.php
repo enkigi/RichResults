@@ -19,20 +19,20 @@ class Hooks {
         // Site-wide Organization (edit this array once and forget)
         $org = [
             "@type" => "Organization",
-            "@id" => "https://encyc.org#organization",
-            "name" => "Encyc",
-            "alternateName" => "Encyc.org",
-            "url" => "https://encyc.org",
-            "logo" => "https://encyc.org/w/skins/common/images/EncycSloth100.png",
-            "description" => "Encyc is a free wiki encyclopedia focused on concise, reliable, and openly editable information.",
+            "@id" => "https://yoursite.org#organization",
+            "name" => "yoursitename",
+            "alternateName" => "yoursite.org",
+            "url" => "https://yoursite.org",
+            "logo" => "https://your logo url",
+            "description" => "description of your site",
             "sameAs" => [
-                "https://x.com/encyc",
-                "https://reddit.com/r/encyc",
-                "https://encyc.substack.com"
+                "https://x.com/yourx",
+                "https://reddit.com/r/yourreddit",
+                "https://yoursite.substack.com"
             ],
             "address" => [
                 "@type" => "PostalAddress",
-                "addressRegion" => "NJ",
+                "addressRegion" => "CA",
                 "addressCountry" => "US"
             ]
         ];
@@ -48,10 +48,10 @@ class Hooks {
             "inLanguage" => "en",
             "author" => [
                 "@type" => "Organization",
-                "name" => "Encyc Community",
-                "url" => "https://encyc.org/wiki/Encyc:About"
+                "name" => "Your Community",
+                "url" => "https://page for your community"
             ],
-            "publisher" => [ "@id" => "https://encyc.org#organization" ]
+            "publisher" => [ "@id" => "https://yoursite.org#organization" ]
         ];
 
         $graph = [ $org, $article ];
