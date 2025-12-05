@@ -1,31 +1,24 @@
 {
     "name": "RichResults",
     "author": [
-        "Encyc Team",
+        "Encyc",
         "Enki"
     ],
     "url": "https://www.mediawiki.org/wiki/Extension:RichResults",
-    "description": "Adds site-wide Organization JSON-LD for Google rich results and structured data."
-    "version": "1.0.1",
-    "license-name": "MIT",
+    "version": "1.0.2",
+    "description": "Adds JSON-LD structured data: Organization + Article",
     "type": "parserhook",
     "requires": {
         "MediaWiki": ">= 1.35.0"
     },
+    "license-name": "MIT",
+    "manifest_version": 2,
 
     "AutoloadNamespaces": {
         "RichResults\\": "src/"
     },
 
-    "HookHandlers": {
-        "RichResults.main": {
-            "class": "RichResults\\HookHandler"
-        }
-    },
-
     "Hooks": {
-        "BeforePageDisplay": "RichResults.main"
-    },
-
-    "manifest_version": 2
+        "BeforePageDisplay": "RichResults\\Hooks::onBeforePageDisplay"
+    }
 }
