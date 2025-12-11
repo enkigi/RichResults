@@ -56,7 +56,7 @@ class Hooks {
             "headline" => $title->getText(),
             "name" => $title->getText(),
             "dateModified" => wfTimestamp( TS_ISO_8601, $out->getRevisionTimestamp() ?: wfTimestampNow() ),
-            // INSERT dateCreated IMMEDIATELY AFTER dateModified
+            // Insert dateCreated immediately after dateModified
             // only add it if the timestamp exists
             ...( ( $dc = self::getDateCreatedTimestamp( $title )) ? [ "dateCreated" => $dc ] : [] ),
             "inLanguage" => "en",
