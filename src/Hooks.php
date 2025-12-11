@@ -58,7 +58,7 @@ class Hooks {
             "dateModified" => wfTimestamp( TS_ISO_8601, $out->getRevisionTimestamp() ?: wfTimestampNow() ),
             // INSERT dateCreated IMMEDIATELY AFTER dateModified
             // only add it if the timestamp exists
-            ...(( $dc = self::getDateCreatedTimestamp( $title )) ? [ "dateCreated" => $dc ] : [] ),
+            ...( ( $dc = self::getDateCreatedTimestamp( $title )) ? [ "dateCreated" => $dc ] : [] ),
             "inLanguage" => "en",
             "author" => [
                 "@type" => "Organization",
