@@ -8,7 +8,7 @@ use MediaWiki\MediaWikiServices;
 
 class Hooks {
 
-    /** Returns timestamp in ISO format of first revision or null */
+    // Returns timestamp in ISO format of first revision or null
     private static function getDateCreatedTimestamp( $title ): ?string {
         $revision = MediaWikiServices::getInstance()
             ->getRevisionLookup()
@@ -48,7 +48,7 @@ class Hooks {
             ]
         ];
 
-        // Per-article dynamic data (always up-to-date, no parsing needed)
+        // Per-article dynamic data
         $article = [
             "@type" => "Article",
             "@id" => $title->getCanonicalURL() . "#article",
