@@ -5,8 +5,8 @@
         "Enki"
     ],
     "url": "https://www.mediawiki.org/wiki/Extension:RichResults",
-    "version": "1.0.2",
-    "description": "Adds JSON-LD structured data: Organization + Article",
+    "version": "1.0.3",
+    "description": "Adds JSON-LD structured data for rich results",
     "type": "parserhook",
     "requires": {
         "MediaWiki": ">= 1.35.0"
